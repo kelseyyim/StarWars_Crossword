@@ -14,6 +14,12 @@
 		956B99F72256B53900A07B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956B99F52256B53900A07B81 /* LaunchScreen.storyboard */; };
 		956B9A022256B53A00A07B81 /* Crossword_v4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A012256B53A00A07B81 /* Crossword_v4Tests.swift */; };
 		956B9A0D2256B53A00A07B81 /* Crossword_v4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A0C2256B53A00A07B81 /* Crossword_v4UITests.swift */; };
+		956B9A1B2256D9DE00A07B81 /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A1A2256D9DE00A07B81 /* HelpScreen.swift */; };
+		956B9A232256DDD700A07B81 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A222256DDD700A07B81 /* KeyboardViewController.swift */; };
+		956B9A272256DDD700A07B81 /* CrosswordKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 956B9A202256DDD700A07B81 /* CrosswordKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		956B9A2D2256DE6500A07B81 /* CWKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956B9A2C2256DE6500A07B81 /* CWKeyboard.xib */; };
+		956B9A302259C23600A07B81 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A2E2259C21D00A07B81 /* CustomButton.swift */; };
+		956B9A322259C36700A07B81 /* IntroScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A312259C36700A07B81 /* IntroScreenController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +37,28 @@
 			remoteGlobalIDString = 956B99E82256B53200A07B81;
 			remoteInfo = "Crossword v4";
 		};
+		956B9A252256DDD700A07B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 956B99E12256B53100A07B81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 956B9A1F2256DDD700A07B81;
+			remoteInfo = CrosswordKeyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		956B9A2B2256DDD700A07B81 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				956B9A272256DDD700A07B81 /* CrosswordKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		956B99E92256B53200A07B81 /* Crossword v4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crossword v4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +74,13 @@
 		956B9A082256B53A00A07B81 /* Crossword v4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crossword v4UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		956B9A0C2256B53A00A07B81 /* Crossword_v4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossword_v4UITests.swift; sourceTree = "<group>"; };
 		956B9A0E2256B53A00A07B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		956B9A1A2256D9DE00A07B81 /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
+		956B9A202256DDD700A07B81 /* CrosswordKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CrosswordKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		956B9A222256DDD700A07B81 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		956B9A242256DDD700A07B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		956B9A2C2256DE6500A07B81 /* CWKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CWKeyboard.xib; sourceTree = "<group>"; };
+		956B9A2E2259C21D00A07B81 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		956B9A312259C36700A07B81 /* IntroScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreenController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		956B9A1D2256DDD700A07B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +121,7 @@
 				956B99EB2256B53200A07B81 /* Crossword v4 */,
 				956B9A002256B53A00A07B81 /* Crossword v4Tests */,
 				956B9A0B2256B53A00A07B81 /* Crossword v4UITests */,
+				956B9A212256DDD700A07B81 /* CrosswordKeyboard */,
 				956B99EA2256B53200A07B81 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +132,7 @@
 				956B99E92256B53200A07B81 /* Crossword v4.app */,
 				956B99FD2256B53A00A07B81 /* Crossword v4Tests.xctest */,
 				956B9A082256B53A00A07B81 /* Crossword v4UITests.xctest */,
+				956B9A202256DDD700A07B81 /* CrosswordKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +140,15 @@
 		956B99EB2256B53200A07B81 /* Crossword v4 */ = {
 			isa = PBXGroup;
 			children = (
+				956B9A2E2259C21D00A07B81 /* CustomButton.swift */,
+				956B9A312259C36700A07B81 /* IntroScreenController.swift */,
 				956B99EC2256B53200A07B81 /* AppDelegate.swift */,
 				956B99EE2256B53200A07B81 /* ViewController.swift */,
 				956B99F02256B53200A07B81 /* Main.storyboard */,
 				956B99F32256B53900A07B81 /* Assets.xcassets */,
 				956B99F52256B53900A07B81 /* LaunchScreen.storyboard */,
 				956B99F82256B53900A07B81 /* Info.plist */,
+				956B9A1A2256D9DE00A07B81 /* HelpScreen.swift */,
 			);
 			path = "Crossword v4";
 			sourceTree = "<group>";
@@ -125,6 +171,16 @@
 			path = "Crossword v4UITests";
 			sourceTree = "<group>";
 		};
+		956B9A212256DDD700A07B81 /* CrosswordKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				956B9A222256DDD700A07B81 /* KeyboardViewController.swift */,
+				956B9A242256DDD700A07B81 /* Info.plist */,
+				956B9A2C2256DE6500A07B81 /* CWKeyboard.xib */,
+			);
+			path = CrosswordKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +191,12 @@
 				956B99E52256B53200A07B81 /* Sources */,
 				956B99E62256B53200A07B81 /* Frameworks */,
 				956B99E72256B53200A07B81 /* Resources */,
+				956B9A2B2256DDD700A07B81 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				956B9A262256DDD700A07B81 /* PBXTargetDependency */,
 			);
 			name = "Crossword v4";
 			productName = "Crossword v4";
@@ -181,6 +239,23 @@
 			productReference = 956B9A082256B53A00A07B81 /* Crossword v4UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		956B9A1F2256DDD700A07B81 /* CrosswordKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 956B9A282256DDD700A07B81 /* Build configuration list for PBXNativeTarget "CrosswordKeyboard" */;
+			buildPhases = (
+				956B9A1C2256DDD700A07B81 /* Sources */,
+				956B9A1D2256DDD700A07B81 /* Frameworks */,
+				956B9A1E2256DDD700A07B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrosswordKeyboard;
+			productName = CrosswordKeyboard;
+			productReference = 956B9A202256DDD700A07B81 /* CrosswordKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +277,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 956B99E82256B53200A07B81;
 					};
+					956B9A1F2256DDD700A07B81 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 956B99E42256B53100A07B81 /* Build configuration list for PBXProject "Crossword v4" */;
@@ -220,6 +298,7 @@
 				956B99E82256B53200A07B81 /* Crossword v4 */,
 				956B99FC2256B53A00A07B81 /* Crossword v4Tests */,
 				956B9A072256B53A00A07B81 /* Crossword v4UITests */,
+				956B9A1F2256DDD700A07B81 /* CrosswordKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +328,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		956B9A1E2256DDD700A07B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956B9A2D2256DE6500A07B81 /* CWKeyboard.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,6 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956B9A302259C23600A07B81 /* CustomButton.swift in Sources */,
+				956B9A1B2256D9DE00A07B81 /* HelpScreen.swift in Sources */,
+				956B9A322259C36700A07B81 /* IntroScreenController.swift in Sources */,
 				956B99EF2256B53200A07B81 /* ViewController.swift in Sources */,
 				956B99ED2256B53200A07B81 /* AppDelegate.swift in Sources */,
 			);
@@ -277,6 +367,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		956B9A1C2256DDD700A07B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				956B9A232256DDD700A07B81 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +387,11 @@
 			isa = PBXTargetDependency;
 			target = 956B99E82256B53200A07B81 /* Crossword v4 */;
 			targetProxy = 956B9A092256B53A00A07B81 /* PBXContainerItemProxy */;
+		};
+		956B9A262256DDD700A07B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 956B9A1F2256DDD700A07B81 /* CrosswordKeyboard */;
+			targetProxy = 956B9A252256DDD700A07B81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,6 +534,7 @@
 		956B9A122256B53A00A07B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NS76665K2;
@@ -449,6 +553,7 @@
 		956B9A132256B53A00A07B81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NS76665K2;
@@ -546,6 +651,44 @@
 			};
 			name = Release;
 		};
+		956B9A292256DDD700A07B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NS76665K2;
+				INFOPLIST_FILE = CrosswordKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kelseyyim.Crossword-v4.CrosswordKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		956B9A2A2256DDD700A07B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NS76665K2;
+				INFOPLIST_FILE = CrosswordKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kelseyyim.Crossword-v4.CrosswordKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +724,15 @@
 			buildConfigurations = (
 				956B9A182256B53A00A07B81 /* Debug */,
 				956B9A192256B53A00A07B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		956B9A282256DDD700A07B81 /* Build configuration list for PBXNativeTarget "CrosswordKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				956B9A292256DDD700A07B81 /* Debug */,
+				956B9A2A2256DDD700A07B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

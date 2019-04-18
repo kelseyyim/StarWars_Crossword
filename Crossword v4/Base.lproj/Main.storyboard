@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Sx-Sf-IbG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Intro Screen Controller-->
+        <scene sceneID="7Xf-bv-ooO">
+            <objects>
+                <viewController restorationIdentifier="home" storyboardIdentifier="home" id="5Sx-Sf-IbG" customClass="IntroScreenController" customModule="Crossword_v4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yWx-S9-RU2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yoda" translatesAutoresizingMaskIntoConstraints="NO" id="HuH-qV-PMc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HuH-qV-PMc" firstAttribute="top" secondItem="yWx-S9-RU2" secondAttribute="top" id="2Xy-Hr-0nl"/>
+                            <constraint firstItem="HuH-qV-PMc" firstAttribute="bottom" secondItem="5JV-De-ST4" secondAttribute="bottom" id="97x-Bb-VBB"/>
+                            <constraint firstAttribute="trailing" secondItem="HuH-qV-PMc" secondAttribute="trailing" id="C8k-Cz-sSn"/>
+                            <constraint firstItem="HuH-qV-PMc" firstAttribute="leading" secondItem="yWx-S9-RU2" secondAttribute="leading" id="Gpv-Yw-pYR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5JV-De-ST4"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="gameScreen" id="hle-8i-1oX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YjO-oU-Zeo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-669.60000000000002" y="120.98950524737631"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="game" storyboardIdentifier="game" id="BYZ-38-t0r" customClass="ViewController" customModule="Crossword_v4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-cG-zqe">
+                                <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRF-cN-taM">
+                                <rect key="frame" x="139" y="549" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46069794889999999" green="0.70071369409999995" blue="0.91268390420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Rik-xe-rKB"/>
+                                    <outlet property="textDragDelegate" destination="BYZ-38-t0r" id="IDK-cF-io7"/>
+                                    <outlet property="textDropDelegate" destination="BYZ-38-t0r" id="Byx-pp-EER"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh9-Zp-g8b" customClass="KelseyButton" customModule="Crossword_v4" customModuleProvider="target">
+                                <rect key="frame" x="257" y="549" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97356836930000001" green="0.1316769518" blue="0.59428792159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressSubmit" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1r-HO-FNV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4r-eg-5wi">
+                                <rect key="frame" x="85" y="30" width="200" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxd-iS-0AA">
+                                <rect key="frame" x="85" y="497" width="200" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-05-BBo">
+                                <rect key="frame" x="87" y="231" width="200" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhR-lg-uNk">
+                                <rect key="frame" x="48" y="456" width="300" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UJa-cG-zqe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Ajs-zi-sJU"/>
+                            <constraint firstItem="UJa-cG-zqe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AuU-Iu-3xh"/>
+                            <constraint firstItem="UJa-cG-zqe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="egs-GS-nRD"/>
+                            <constraint firstAttribute="trailing" secondItem="UJa-cG-zqe" secondAttribute="trailing" id="z0h-Ui-9Fl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="IhR-lg-uNk" id="g2e-Qi-f6m"/>
+                        <outlet property="infoLabel" destination="W4r-eg-5wi" id="Zi7-UA-9g4"/>
+                        <outlet property="infoLabel2" destination="fxd-iS-0AA" id="HoO-dg-Mad"/>
+                        <outlet property="infoLabel3" destination="bWO-05-BBo" id="aDj-cJ-TfU"/>
+                        <outlet property="mainView" destination="UJa-cG-zqe" id="mm1-Ly-S7D"/>
+                        <outlet property="submitButton" destination="Sh9-Zp-g8b" id="Oic-T6-gDn"/>
+                        <outlet property="textField" destination="nRF-cN-taM" id="EvR-hE-oGn"/>
+                        <segue destination="5Sx-Sf-IbG" kind="presentation" identifier="homeScreen" id="PFz-kx-6sd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="112.89355322338831"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="yoda" width="643" height="1074"/>
+    </resources>
 </document>

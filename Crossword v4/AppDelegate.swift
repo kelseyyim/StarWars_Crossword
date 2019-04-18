@@ -19,6 +19,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_ application: UIApplication,
+                     shouldSaveApplicationState coder: NSCoder) -> Bool {
+        // Save the current app version to the archive.
+        coder.encode(11.0, forKey: "MyAppVersion")
+        
+        // Always save state information.
+        return true
+    }
+    
+    func application(_ application: UIApplication,
+                     shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        // Restore the state only if the app version matches.
+        let version = coder.decodeFloat(forKey: "MyAppVersion")
+        if version == 11.0 {
+            return true
+        }
+        
+        // Do not restore from old data.
+        return false
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -39,6 +60,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    func applicationWillFinishLaunching(_ application: UIApplication) {
+        
+        
     }
 
 
