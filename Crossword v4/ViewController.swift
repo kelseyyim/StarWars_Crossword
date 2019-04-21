@@ -99,9 +99,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.titleScreenView.addSubview(darkPlay)
         self.titleScreenView.addSubview(lightPlay)
         
-        print("x", view.center.x)
-        print("y", view.center.y)
-
         //Create home button
         deathstar = UIButton(frame: CGRect(x: 20, y: 20, width: 50, height: 50))
         deathstar.addTarget(self, action: #selector(self.onPress(_:)), for: UIControl.Event.touchUpInside)
@@ -117,21 +114,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //Set info labels to disappear and reappear on touch
         infoLabel.backgroundColor = UIColor.yellow.withAlphaComponent(0.8)
         infoLabel.textAlignment = .center
-        infoLabel.text = " Touch the death star to go back home "
+        infoLabel.text = " Touch the death star to go back home 🏠"
         infoLabel.numberOfLines = 0
         infoLabel.sizeToFit()
         infoLabel.isHidden = true
         
         infoLabel2.backgroundColor = UIColor.yellow.withAlphaComponent(0.8)
         infoLabel2.textAlignment = .center
-        infoLabel2.text = " Touch the boxes and guess the answer! "
+        infoLabel2.text = " Touch the boxes and guess the answer! ☝🏻"
         infoLabel2.numberOfLines = 0
         infoLabel2.sizeToFit()
         infoLabel2.isHidden = true
         
         infoLabel3.backgroundColor = UIColor.yellow
         infoLabel3.textAlignment = .center
-        infoLabel3.text = " Pinch to zoom in/out if necessary "
+        infoLabel3.text = " Pinch to zoom in/out if necessary 🔍"
         infoLabel3.numberOfLines = 0
         infoLabel3.sizeToFit()
         infoLabel3.isHidden = true
@@ -171,9 +168,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         buy_yes.isHidden = true
         
         buyLabel = UILabel(frame: CGRect(x: view.frame.width/2, y: self.buyHintView.center.x, width: view.frame.width/2, height: 50))
-        buyLabel.center.y = buyHintView.center.y - 30.0
-        buyLabel.center.x = buyHintView.center.x
-        buyLabel.text = "Spend 50 coins on another hint?"
+        buyLabel.center.y = buyHintView.center.y - 35.0
+        buyLabel.center.x = buyHintView.center.x + 5.0
+        buyLabel.text = "Spend 100 coins on another hint? 🤑"
         buyLabel.textAlignment = .center
         buyLabel.numberOfLines = 0
         buyLabel.sizeToFit()
@@ -450,7 +447,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         if let button = self.view.viewWithTag((index * 8 - index + 7)) as?  KelseyButton
                         {
                             if (button.tag == 49){
-                                button.thirdWord = "siths"
+                                button.thirdWord = "porgs"
                             }
                             button.backgroundColor = UIColor(white: 1, alpha: 0.7)
                             button.word = "siths"
@@ -493,10 +490,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         for i in wordArray{
             if (i.word.contains(button.word) || i.secondWord.contains(button.secondWord) || i.thirdWord.contains(button.word)){
-                UIView.animate(withDuration: 0.5, delay: 0.0, options:[.repeat, .autoreverse], animations: {
-                    i.backgroundColor = UIColor(hex: "E24A51ff")
-                }, completion:nil)
-                //i.backgroundColor = UIColor.white
+                i.backgroundColor = UIColor.white
                 i.pressedBool = true
 
                 }
@@ -519,6 +513,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             numOfCorrectAnswers += 1
             if (numOfCorrectAnswers == 8){
+                coins += 100
                 print("You did it!")
             }
         }
@@ -560,13 +555,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func buyHint( _ button : UIButton){
-        coins -= 50
-        coinLabel.text = String(coins)
-        hintLabel.text = secondHint
-        buyHintView.isHidden = true
-        buy_yes.isHidden = true
-        buy_no.isHidden = true
-        buyLabel.isHidden = true
+        if (coins - 100 < 0){
+            buyLabel.text = "Sorry! Looks like you don't have enough coins 😭"
+            buyLabel.textAlignment = .center
+            buyLabel.numberOfLines = 0
+            buyLabel.sizeToFit()
+            buy_yes.isHidden = true
+            buy_no.setTitle("Close", for: .normal)
+        }
+        else{
+            coins -= 100
+            coinLabel.text = String(coins)
+            hintLabel.text = secondHint
+            buyHintView.isHidden = true
+            buy_yes.isHidden = true
+            buy_no.isHidden = true
+            buyLabel.isHidden = true
+        }
         
     }
     
