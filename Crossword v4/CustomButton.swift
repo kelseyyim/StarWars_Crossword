@@ -19,6 +19,7 @@ import UIKit
     var hint2: String = ""
     var pressed: Int = 0
     var pressedBool: Bool = false
+    var correctAnswer: Bool = false
     
     @IBInspectable var cornerRadius: CGFloat = 0{   //repace 0 with any number to programmatically force TILES to be round
         didSet{

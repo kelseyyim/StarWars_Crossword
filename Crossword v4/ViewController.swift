@@ -154,21 +154,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         hintButton.backgroundColor = UIColor(hex: "#6E8CD9ff")
         
-        buy_no = UIButton(frame: CGRect(x: view.frame.width/2, y: self.buyHintView.center.x, width: 40, height: 50))
+        buy_no = UIButton(frame: CGRect(x: view.frame.width/2, y: self.buyHintView.center.x, width: 45, height: 60))
         buy_no.center.y = buyHintView.center.y
         buy_no.addTarget(self, action: #selector(closeHint(_:)), for: UIControl.Event.touchUpInside)
         buy_no.setTitle("No", for: .normal)
         buy_no.isHidden = true
         
-        buy_yes = UIButton(frame: CGRect(x: buy_no.center.x, y: self.buyHintView.center.x, width: 40, height: 50))
+        buy_yes = UIButton(frame: CGRect(x: buy_no.center.x, y: self.buyHintView.center.x, width: 40, height: 60))
         buy_yes.center.x = buyHintView.center.x - 20.0
         buy_yes.center.y = buy_no.center.y
         buy_yes.addTarget(self, action: #selector(buyHint(_:)), for: UIControl.Event.touchUpInside)
         buy_yes.setTitle("Yes", for: .normal)
         buy_yes.isHidden = true
         
-        buyLabel = UILabel(frame: CGRect(x: view.frame.width/2, y: self.buyHintView.center.x, width: view.frame.width/2, height: 50))
-        buyLabel.center.y = buyHintView.center.y - 35.0
+        buyLabel = UILabel(frame: CGRect(x: view.frame.width/2, y: self.buyHintView.center.x, width: view.frame.width/2, height: 45))
+        buyLabel.center.y = buyHintView.center.y - 40.0
         buyLabel.center.x = buyHintView.center.x + 5.0
         buyLabel.text = "Spend 100 coins on another hint? 🤑"
         buyLabel.textAlignment = .center
@@ -515,6 +515,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if (numOfCorrectAnswers == 8){
                 coins += 100
                 print("You did it!")
+                for i in wordArray{
+                    if (i.correctAnswer == true){
+                        i.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+                    }
+                }
+                hintLabel.text = "Congrats! 🎉 You earned 100 coins. More levels coming soon!"
             }
         }
         else{
@@ -546,6 +552,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 i.setTitle(String(answerLetters[count-1]), for: .normal)
                 i.setTitleColor(UIColor.black, for: .normal)
                 i.backgroundColor = UIColor.green
+                i.correctAnswer = true
                 i.isEnabled = false
             }
         }
@@ -561,9 +568,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             buyLabel.numberOfLines = 0
             buyLabel.sizeToFit()
             buy_yes.isHidden = true
-            buy_no.setTitle("Close", for: .normal)
         }
         else{
+            buyLabel.text = "Spend 100 coins on another hint? 🤑"
             coins -= 100
             coinLabel.text = String(coins)
             hintLabel.text = secondHint
@@ -576,6 +583,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func closeHint( _ button: UIButton){
+        buyLabel.text = "Spend 100 coins on another hint? 🤑"
         buyHintView.isHidden = true
         buy_yes.isHidden = true
         buy_no.isHidden = true
