@@ -18,6 +18,7 @@ var currentAnswer: String = ""
 var secondHint: String = ""
 var viewWidth: Int = 0
 var coins: Int = 50
+var numOfCorrectAnswers: Int = 0
 
 
 class ViewController: UIViewController, UITextFieldDelegate {
@@ -492,7 +493,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         for i in wordArray{
             if (i.word.contains(button.word) || i.secondWord.contains(button.secondWord) || i.thirdWord.contains(button.word)){
-                i.backgroundColor = UIColor.white
+                UIView.animate(withDuration: 0.5, delay: 0.0, options:[.repeat, .autoreverse], animations: {
+                    i.backgroundColor = UIColor(hex: "E24A51ff")
+                }, completion:nil)
+                //i.backgroundColor = UIColor.white
                 i.pressedBool = true
 
                 }
@@ -512,6 +516,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 coinLabel.text = String(coins)
                 changeButtonLabels()
                 hintLabel.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+            }
+            numOfCorrectAnswers += 1
+            if (numOfCorrectAnswers == 8){
+                print("You did it!")
             }
         }
         else{
