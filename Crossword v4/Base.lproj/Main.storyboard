@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Sx-Sf-IbG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,7 +75,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4r-eg-5wi">
-                                <rect key="frame" x="85" y="30" width="200" height="25"/>
+                                <rect key="frame" x="60" y="81" width="200" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF9-Wf-2Kb">
+                                <rect key="frame" x="148" y="20" width="50" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -102,6 +109,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcU-Nk-Dao" customClass="KelseyButton" customModule="Crossword_v4" customModuleProvider="target">
+                                <rect key="frame" x="257" y="587" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97356836930000001" green="0.1316769518" blue="0.59428792159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Buy hint">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressHint" destination="BYZ-38-t0r" eventType="touchUpInside" id="F01-5U-CMV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -113,11 +131,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="coinLabel" destination="NF9-Wf-2Kb" id="GJy-Y8-PKn"/>
+                        <outlet property="hintButton" destination="DcU-Nk-Dao" id="NfR-yD-VRw"/>
                         <outlet property="hintLabel" destination="IhR-lg-uNk" id="g2e-Qi-f6m"/>
                         <outlet property="infoLabel" destination="W4r-eg-5wi" id="Zi7-UA-9g4"/>
                         <outlet property="infoLabel2" destination="fxd-iS-0AA" id="HoO-dg-Mad"/>
                         <outlet property="infoLabel3" destination="bWO-05-BBo" id="aDj-cJ-TfU"/>
-                        <outlet property="mainView" destination="UJa-cG-zqe" id="mm1-Ly-S7D"/>
+                        <outlet property="mainView" destination="UJa-cG-zqe" id="3PK-zz-7fR"/>
                         <outlet property="submitButton" destination="Sh9-Zp-g8b" id="Oic-T6-gDn"/>
                         <outlet property="textField" destination="nRF-cN-taM" id="EvR-hE-oGn"/>
                         <segue destination="5Sx-Sf-IbG" kind="presentation" identifier="homeScreen" id="PFz-kx-6sd"/>
@@ -125,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="112.89355322338831"/>
+            <point key="canvasLocation" x="461.60000000000002" y="120.98950524737631"/>
         </scene>
     </scenes>
     <resources>

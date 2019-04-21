@@ -14,7 +14,6 @@
 		956B99F72256B53900A07B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956B99F52256B53900A07B81 /* LaunchScreen.storyboard */; };
 		956B9A022256B53A00A07B81 /* Crossword_v4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A012256B53A00A07B81 /* Crossword_v4Tests.swift */; };
 		956B9A0D2256B53A00A07B81 /* Crossword_v4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A0C2256B53A00A07B81 /* Crossword_v4UITests.swift */; };
-		956B9A1B2256D9DE00A07B81 /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A1A2256D9DE00A07B81 /* HelpScreen.swift */; };
 		956B9A232256DDD700A07B81 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956B9A222256DDD700A07B81 /* KeyboardViewController.swift */; };
 		956B9A272256DDD700A07B81 /* CrosswordKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 956B9A202256DDD700A07B81 /* CrosswordKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		956B9A2D2256DE6500A07B81 /* CWKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956B9A2C2256DE6500A07B81 /* CWKeyboard.xib */; };
@@ -74,7 +73,6 @@
 		956B9A082256B53A00A07B81 /* Crossword v4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crossword v4UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		956B9A0C2256B53A00A07B81 /* Crossword_v4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossword_v4UITests.swift; sourceTree = "<group>"; };
 		956B9A0E2256B53A00A07B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		956B9A1A2256D9DE00A07B81 /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
 		956B9A202256DDD700A07B81 /* CrosswordKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CrosswordKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		956B9A222256DDD700A07B81 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		956B9A242256DDD700A07B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				956B99F32256B53900A07B81 /* Assets.xcassets */,
 				956B99F52256B53900A07B81 /* LaunchScreen.storyboard */,
 				956B99F82256B53900A07B81 /* Info.plist */,
-				956B9A1A2256D9DE00A07B81 /* HelpScreen.swift */,
 			);
 			path = "Crossword v4";
 			sourceTree = "<group>";
@@ -344,7 +341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				956B9A302259C23600A07B81 /* CustomButton.swift in Sources */,
-				956B9A1B2256D9DE00A07B81 /* HelpScreen.swift in Sources */,
 				956B9A322259C36700A07B81 /* IntroScreenController.swift in Sources */,
 				956B99EF2256B53200A07B81 /* ViewController.swift in Sources */,
 				956B99ED2256B53200A07B81 /* AppDelegate.swift in Sources */,
